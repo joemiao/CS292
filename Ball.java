@@ -1,10 +1,16 @@
+import java.awt.Color;
+
 //Ezra Bergstein
+
+import java.awt.Color;
+
 public class Ball {
 	private String shape;
 	private String name;
 	private int[] position;
 	private int[] vector;
 	private int[[]] boundingBox;
+	private Color color;
 	
 	public Ball(String name, int[] position, int[] vector)
 	{
@@ -12,6 +18,7 @@ public class Ball {
 		this.name = name;
 		this.position = position;
 		this.vector = vector;
+		this.color = color;
 		this.boundingBox = [[position[0]-1, position[1]+1], [position[0]+1, position[1]+1], [position[0]+1, position[1]-1], position[0]-1, position[1]-1];
 	}
 	

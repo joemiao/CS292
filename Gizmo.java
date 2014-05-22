@@ -1,4 +1,7 @@
 //Ezra Bergstein
+
+import java.awt.Color;
+
 public abstract class Gizmo {
 	private String shape;
 	//what triggers an action
@@ -12,8 +15,9 @@ public abstract class Gizmo {
 	private float reflection;
 	private int[] position;
 	private int[[]] boundingBox;
+	private Color color;
 	//initialization
-	public Gizmo(String shape, String trigger, String orientation, String action, String name, float reflection, int[] position)
+	public Gizmo(String shape, String trigger, String orientation, String action, String name, float reflection, int[] position, Color color)
 	{
 		this.shape = shape
 		this.trigger = trigger
@@ -21,6 +25,7 @@ public abstract class Gizmo {
 		this.name = name
 		this.reflection = reflection
 		this.position = position
+		this.color = color
 		this.boundingBox = [[position[0]-1, position[1]+1], [position[0]+1, position[1]+1], [position[0]+1, position[1]-1], position[0]-1, position[1]-1];
 	}
 
