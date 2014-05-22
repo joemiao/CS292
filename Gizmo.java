@@ -11,6 +11,7 @@ public abstract class Gizmo {
 	//coefficient of reflection
 	private float reflection;
 	private int[] position;
+	private int[[]] boundingBox;
 	//initialization
 	public Gizmo(String shape, String trigger, String orientation, String action, String name, float reflection, int[] position)
 	{
@@ -20,6 +21,7 @@ public abstract class Gizmo {
 		this.name = name
 		this.reflection = reflection
 		this.position = position
+		this.boundingBox = [[position[0]-1, position[1]+1], [position[0]+1, position[1]+1], [position[0]+1, position[1]-1], position[0]-1, position[1]-1];
 	}
 
 	public String getShape()
@@ -49,6 +51,10 @@ public abstract class Gizmo {
 	public int[] getPosition()
 	{
 		return position;
+	}
+	public int[[]] getBoundingBox()
+	{
+		return boundingBox;
 	}
 }
 

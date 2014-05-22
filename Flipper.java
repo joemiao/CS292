@@ -2,7 +2,7 @@
 public class Flipper extends Gizmo{
 	public Flipper(String shape, String trigger, String orientation, String action, String name, float reflection, int[] position)
 	{
-		super(name, orientation, position);
+		super(name, orientation, position, boundingBox);
 		this.shape = "rectangle"
 		this.trigger = "hit";
 		this.action = "rotate";
