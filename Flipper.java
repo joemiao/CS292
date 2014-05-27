@@ -2,9 +2,9 @@ import java.awt.Color;
 
 //Ezra Bergstein
 public class Flipper extends Gizmo{
-	public Flipper(String shape, String trigger, String orientation, String action, String name, float reflection, int[] position, Color color)
+	public Flipper(int orientation, String name, int[] position, Color color, int width, int height)
 	{
-		super(name, orientation, position, boundingBox, color);
+		super(name, orientation, position, boundingBox, color, width, height);
 		this.shape = "rectangle"
 		this.trigger = "hit";
 		this.action = "rotate";
