@@ -4,13 +4,14 @@ import java.awt.Color;
 
 public abstract class Gizmo {
 	private String shape;
-	private int orientation;
 	//0 = northwest, left flipper, 1 = northeast, right flipper, 2 = southeast, 3 = southwest, directions that the hypotenuse faces
 	//direction that the gizmo is facing
+	private int orientation;
 	//what triggers an action
 	private String trigger;
 	//what happens when the trigger is set off
 	private String action;
+	//name of the Gizmo
 	private String name;
 	//coefficient of reflection
 	private float reflection;
@@ -31,6 +32,7 @@ public abstract class Gizmo {
 		this.color = color
 		this.width = width
 		this.height = height
+		//bounding box temp value
 		this.boundingBox = [[position[0]-1, position[1]+1], [position[0]+1, position[1]+1], [position[0]+1, position[1]-1], position[0]-1, position[1]-1];
 	}
 

@@ -1,11 +1,10 @@
-import java.awt.Color;
-
 //Ezra Bergstein
 
 import java.awt.Color;
 
 public class Ball {
 	private String shape;
+	//name of the ball
 	private String name;
 	private int[] position;
 	private int[] vector;
@@ -20,7 +19,8 @@ public class Ball {
 		this.name = name;
 		this.position = position;
 		this.vector = vector;
-		this.color = color;
+		this.color = color
+		//bounding box temp value
 		this.boundingBox = [[position[0]-1, position[1]+1], [position[0]+1, position[1]+1], [position[0]+1, position[1]-1], position[0]-1, position[1]-1];
 	}
 	
