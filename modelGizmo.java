@@ -1,4 +1,4 @@
-package gizmoSampleCode.SampleCode;
+package gizmoSampleCode.Samplecode;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -260,6 +260,7 @@ public class modelGizmo {
          * @effects Repaints the Graphics area g.  Swing will then send the newly painted g to the screen.
          * @param g Graphics context received by either system or app calling repaint()
          */
+        
         @Override public void paintComponent(Graphics g) {
             // first repaint the proper background color (controlled by
             // the windowing system)
@@ -472,9 +473,15 @@ public class modelGizmo {
                 // 
                 int keynum = e.getKeyCode();
 
-                if ((keynum >= 65) && (keynum <= 74)) {
-                    //System.out.println("keypress " + e.getKeyCode());
-                    ball.randomBump();
+       
+                if(keynum == 37){
+                	
+                }else{
+                	if(keynum == 39){
+                		
+                	}else{
+                		
+                	}
                 }
             }
             
@@ -557,6 +564,10 @@ public class modelGizmo {
 
             button = new JButton("Run");
             button.setToolTipText("Start the animation");
+            button.setForeground(Color.red);
+            button.setBackground(Color.BLUE);
+            button.setContentAreaFilled(false);
+            button.setOpaque(true);
             // when this button is pushed it calls animationWindow.setMode(true)
             button.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
@@ -567,6 +578,11 @@ public class modelGizmo {
 
             button = new JButton("Stop");
             button.setToolTipText("Stop the animation");
+            button.setForeground(Color.red);
+            button.setBackground(Color.BLUE);
+            button.setContentAreaFilled(false);
+            button.setOpaque(true);
+
             // when this button is pushed it calls animationWindow.setMode(false)
             button.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
@@ -577,6 +593,10 @@ public class modelGizmo {
 
             button = new JButton("Quit");
             button.setToolTipText("Quit the program");
+            button.setForeground(Color.red);
+            button.setBackground(Color.BLUE);
+            button.setContentAreaFilled(false);
+            button.setOpaque(true);
             button.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     System.exit(0);

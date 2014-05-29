@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 
 public class OnscreenButtons extends JFrame implements ActionListener {
 	private JButton run = new JButton("Run");
-	private JButton stop = new JButton("Quit");
+	private JButton stop = new JButton("Stop");
 	private JButton quit = new JButton("Quit");
 	public OnscreenButtons() {
 		/*add buttons to frame*/
@@ -29,5 +29,5 @@ public class OnscreenButtons extends JFrame implements ActionListener {
 	    	System.exit(0);
 	    } 
 	  }	
-	
+
 }
