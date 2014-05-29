@@ -11,6 +11,8 @@ public class Ball {
 	private int[] vector;
 	private int[[]] boundingBox;
 	private Color color;
+	this.width = width
+	this.height = height
 	
 	public Ball(String name, int[] position, int[] vector)
 	{
@@ -50,5 +52,13 @@ public class Ball {
 	public int[[]] getBoundingBox()
 	{
 		return boundingBox;
+	}
+	public int getWidth()
+	{
+		return width;
+	}
+	public int getHeight()
+	{
+		return height;
 	}
 }

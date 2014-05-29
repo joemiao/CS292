@@ -4,9 +4,10 @@ import java.awt.Color;
 
 public abstract class Gizmo {
 	private String shape;
-	//what triggers an action
-	private String orientation;
+	private int orientation;
+	//0 = northwest, left flipper, 1 = northeast, right flipper, 2 = southeast, 3 = southwest, directions that the hypotenuse faces
 	//direction that the gizmo is facing
+	//what triggers an action
 	private String trigger;
 	//what happens when the trigger is set off
 	private String action;
@@ -16,8 +17,10 @@ public abstract class Gizmo {
 	private int[] position;
 	private int[[]] boundingBox;
 	private Color color;
+	private int width;
+	private int height;
 	//initialization
-	public Gizmo(String shape, String trigger, String orientation, String action, String name, float reflection, int[] position, Color color)
+	public Gizmo(String shape, String trigger, int orientation, String action, String name, float reflection, int[] position, Color color, int width, int height)
 	{
 		this.shape = shape
 		this.trigger = trigger
@@ -26,6 +29,8 @@ public abstract class Gizmo {
 		this.reflection = reflection
 		this.position = position
 		this.color = color
+		this.width = width
+		this.height = height
 		this.boundingBox = [[position[0]-1, position[1]+1], [position[0]+1, position[1]+1], [position[0]+1, position[1]-1], position[0]-1, position[1]-1];
 	}
 
@@ -61,5 +66,14 @@ public abstract class Gizmo {
 	{
 		return boundingBox;
 	}
+	public int getWidth()
+	{
+		return width;
+	}
+	public int getHeight()
+	{
+		return height;
+	}
+	
 }
 
