@@ -1,0 +1,3 @@
+Triangle T01 200 500
+Triangle T02 500 200
+Triangle T02 300 300
